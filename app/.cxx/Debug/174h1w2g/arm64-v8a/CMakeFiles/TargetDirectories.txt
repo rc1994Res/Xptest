@@ -1,0 +1,3 @@
+/Users/renchong/Resource/LsposedSource/XpTest/app/.cxx/Debug/174h1w2g/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/renchong/Resource/LsposedSource/XpTest/app/.cxx/Debug/174h1w2g/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/renchong/Resource/LsposedSource/XpTest/app/.cxx/Debug/174h1w2g/arm64-v8a/CMakeFiles/hooknativetest.dir

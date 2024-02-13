@@ -1,0 +1,7 @@
+Executable : /Users/renchong/Library/Android/sdk/cmake/3.18.1/bin/ninja
+arguments : 
+-C
+/Users/renchong/Resource/LsposedSource/XpTest/app/.cxx/Debug/174h1w2g/arm64-v8a
+hooknativetest
+jvmArgs : 
+

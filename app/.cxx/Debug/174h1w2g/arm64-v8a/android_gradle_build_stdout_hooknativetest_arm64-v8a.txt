@@ -1,0 +1,2 @@
+ninja: Entering directory `/Users/renchong/Resource/LsposedSource/XpTest/app/.cxx/Debug/174h1w2g/arm64-v8a'
+ninja: no work to do.
