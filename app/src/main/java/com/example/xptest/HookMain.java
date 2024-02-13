@@ -67,8 +67,8 @@ public class HookMain implements IXposedHookLoadPackage, IXposedHookInitPackageR
 //            Store.hookLog(lpparam.classLoader);
 
 
-            hookJiaGu(lpparam);
-
+//            hookJiaGu(lpparam);
+            HookTest.init();
 
         }
 

@@ -1,0 +1,6 @@
+# ninja log v5
+1	414	1707810215	CMakeFiles/hooknativetest.dir/native-lib.cpp.o	b01d989b1ac6b563
+1	268	1707810256	CMakeFiles/hooknativetest.dir/hook_test.cpp.o	ff40787bb651ddf7
+268	376	1707810256	/Users/renchong/GitHubResource/xp-test/Xptest/app/build/intermediates/cxx/Debug/59535pg4/obj/arm64-v8a/libhooknativetest.so	c14670e66ff39d15
+1	503	1707810352	CMakeFiles/hooknativetest.dir/hook_test.cpp.o	ff40787bb651ddf7
+504	601	1707810353	/Users/renchong/GitHubResource/xp-test/Xptest/app/build/intermediates/cxx/Debug/59535pg4/obj/arm64-v8a/libhooknativetest.so	c14670e66ff39d15

@@ -1,0 +1,3 @@
+/Users/renchong/GitHubResource/xp-test/Xptest/app/.cxx/Debug/1h39725f/x86/CMakeFiles/rebuild_cache.dir
+/Users/renchong/GitHubResource/xp-test/Xptest/app/.cxx/Debug/1h39725f/x86/CMakeFiles/edit_cache.dir
+/Users/renchong/GitHubResource/xp-test/Xptest/app/.cxx/Debug/1h39725f/x86/CMakeFiles/hooknativetest.dir
