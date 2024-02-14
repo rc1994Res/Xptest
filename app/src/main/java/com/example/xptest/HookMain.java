@@ -68,12 +68,33 @@ public class HookMain implements IXposedHookLoadPackage, IXposedHookInitPackageR
 
 
 //            hookJiaGu(lpparam);
-            HookTest.init();
+//            HookTest.init();
+//            HookTest.logic();
+
+            nativehook(lpparam);
+
 
         }
 
 
 
+    }
+
+    private static void nativehook(final XC_LoadPackage.LoadPackageParam lpparam) throws Throwable{
+        HookTest.init();
+        Class<?> MainActivityClass = XposedHelpers.findClassIfExists("com.hexl.lessontest.MainActivity", lpparam.classLoader);
+        XposedBridge.hookAllMethods(MainActivityClass, "initView", new XC_MethodHook() {
+            @Override
+            protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                super.beforeHookedMethod(param);
+            }
+
+            @Override
+            protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                //initview执行之后再hook
+                HookTest.logic();
+            }
+        });
     }
 
     private static void hookJiaGu(final XC_LoadPackage.LoadPackageParam lpparam){

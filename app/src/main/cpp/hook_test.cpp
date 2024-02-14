@@ -9,6 +9,7 @@
 #include <dlfcn.h>
 #include "lsp.h"
 #include "log.h"
+#include "elf.h"
 
 
 
@@ -34,6 +35,11 @@ int (*backup)();
 HOOK_DEF(FILE *, myfopen, const char *filename, const char *mode){
     if (strstr(filename, "file.txt")) return nullptr;
     return orig_myfopen(filename, mode);
+}
+
+HOOK_DEF(int, add, int x, int y){
+    LOGI("add -> x: %d, y: %d", x, y);
+    return orig_add(x, y);
 }
 
 
@@ -64,6 +70,9 @@ void on_library_loaded(const char *name, void *handle) {
     if (strstr(name, "lessontest.so")) {
         void *target_fun = dlsym(handle, "target_fun");
         HOOK_SYMBOL(target_fun);
+        //根据偏移值进行hook
+        void *add = ElfUtils::GetModuleOffset("lessontest.so", 0xFFBC);
+        HOOK_SYMBOL(add);
     }
 }
 
