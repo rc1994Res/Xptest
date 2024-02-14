@@ -17,3 +17,8 @@
 
 
 
+#define LOGW(...) __android_log_print(ANDROID_LOG_WARN,TAG,__VA_ARGS__)
+
+
+
+

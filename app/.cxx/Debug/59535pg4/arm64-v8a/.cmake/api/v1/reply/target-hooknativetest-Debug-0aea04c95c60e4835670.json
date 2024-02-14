@@ -48,7 +48,8 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			],
 			"sysroot" : 
 			{
@@ -94,7 +95,8 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -110,6 +112,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "native-lib.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "elf.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

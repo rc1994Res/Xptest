@@ -80,6 +80,13 @@ build CMakeFiles/hooknativetest.dir/native-lib.cpp.o: CXX_COMPILER__hooknativete
   OBJECT_DIR = CMakeFiles/hooknativetest.dir
   OBJECT_FILE_DIR = CMakeFiles/hooknativetest.dir
 
+build CMakeFiles/hooknativetest.dir/elf.cpp.o: CXX_COMPILER__hooknativetest_Debug /Users/renchong/GitHubResource/xp-test/Xptest/app/src/main/cpp/elf.cpp || cmake_object_order_depends_target_hooknativetest
+  DEFINES = -Dhooknativetest_EXPORTS
+  DEP_FILE = CMakeFiles/hooknativetest.dir/elf.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -O0 -fno-limit-debug-info  -fPIC
+  OBJECT_DIR = CMakeFiles/hooknativetest.dir
+  OBJECT_FILE_DIR = CMakeFiles/hooknativetest.dir
+
 
 # =============================================================================
 # Link build statements for SHARED_LIBRARY target hooknativetest
@@ -88,7 +95,7 @@ build CMakeFiles/hooknativetest.dir/native-lib.cpp.o: CXX_COMPILER__hooknativete
 #############################################
 # Link the shared library /Users/renchong/GitHubResource/xp-test/Xptest/app/build/intermediates/cxx/Debug/59535pg4/obj/arm64-v8a/libhooknativetest.so
 
-build /Users/renchong/GitHubResource/xp-test/Xptest/app/build/intermediates/cxx/Debug/59535pg4/obj/arm64-v8a/libhooknativetest.so: CXX_SHARED_LIBRARY_LINKER__hooknativetest_Debug CMakeFiles/hooknativetest.dir/hook_test.cpp.o CMakeFiles/hooknativetest.dir/native-lib.cpp.o | /Users/renchong/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so
+build /Users/renchong/GitHubResource/xp-test/Xptest/app/build/intermediates/cxx/Debug/59535pg4/obj/arm64-v8a/libhooknativetest.so: CXX_SHARED_LIBRARY_LINKER__hooknativetest_Debug CMakeFiles/hooknativetest.dir/hook_test.cpp.o CMakeFiles/hooknativetest.dir/native-lib.cpp.o CMakeFiles/hooknativetest.dir/elf.cpp.o | /Users/renchong/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -O0 -fno-limit-debug-info
   LINK_FLAGS = -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments
   LINK_LIBRARIES = -llog  -latomic -lm
