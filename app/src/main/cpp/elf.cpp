@@ -16,6 +16,7 @@
 
 
 #include "log.h"
+#include "elf.h"
 
 using namespace SandHook::Elf;
 
@@ -218,3 +219,28 @@ void ElfImg::searchMaps() {
     }
     fclose(f);
 }
+
+void *ElfUtils::GetModuleBase(const char *so) {
+    return ElfImg::GetModuleBase(so);
+}
+
+
+void *ElfUtils::GetModuleOffset(const char *so, size_t offset){
+    void *baseAddr = ElfImg::GetModuleBase(so);
+    if (baseAddr == nullptr){
+        LOGI("MoudleBase is null");
+        return nullptr;
+    }
+    void *targetAddr = reinterpret_cast<void *>(reinterpret_cast<size_t>(baseAddr) + offset);
+
+    return targetAddr;
+}
+
+//实例函数GetSymAddress
+void *ElfUtils::GetSym(const char* so, const char* symb){
+    //实例化ElfImg
+    ElfImg myElfImg(so);
+    void *SysAddr  = reinterpret_cast<void *>(myElfImg.GetSymAddress(symb));
+    return SysAddr;
+}
+

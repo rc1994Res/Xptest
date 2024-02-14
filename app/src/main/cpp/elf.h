@@ -83,3 +83,10 @@ namespace SandHook {
         };
     }
 }
+
+class ElfUtils{
+public:
+    static void* GetModuleBase(const char* so);
+    static void* GetModuleOffset(const char* so, size_t offset);
+    static void* GetSym(const char* so, const char* symb);
+};
